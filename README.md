@@ -8,6 +8,18 @@
 [![Groq](https://img.shields.io/badge/LLM-Qwen3--32B-red.svg)]()
 [![Streamlit](https://img.shields.io/badge/UI-Streamlit-ff4b4b.svg)]()
 
+
+## 🚀 Live Demo
+
+Try the deployed app here:
+
+👉 [Click to open Streamlit App](https://telecomchatbot-2nfrvyb6blwobyke9aheih.streamlit.app/)
+
+## 🎥 Video Demo
+
+[![Watch the Demo](https://img.youtube.com/vi/8SRbZjVIOFQ/maxresdefault.jpg)](https://youtu.be/8SRbZjVIOFQ)
+
+
 ## 🚀 The Problem
 
 Telecom support teams manage information scattered across:
@@ -140,3 +152,52 @@ even if those exact words never appear.
 | Modular Ingestion Pipeline | Easily update FAQs, PDFs, and tickets |
 
 ---
+
+## 🚧 Challenges Solved
+
+### Multi-Source Retrieval
+Combining FAQ, ticket, and documentation results into a single context.
+
+### Source Attribution
+Ensuring responses always reference their origin.
+
+### Context Management
+Balancing retrieval quality while keeping prompts concise.
+
+### PDF Chunking
+Selecting chunk size and overlap to preserve context.
+
+
+## ▶️ Running the Application
+
+### 1. Install Dependencies
+
+```bash
+
+pip install -r requirements.txt
+
+```
+
+### 2. Build the Knowledge Base
+
+```bash
+
+python ingest_faq.py
+
+python ingest_pdf.py
+
+python ingest_tickets.py
+
+```
+
+### 3. Launch the Chat Interface
+
+```bash
+
+streamlit run app.py
+
+```
+
+---
+
+
