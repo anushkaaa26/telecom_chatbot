@@ -2,18 +2,22 @@
 CLI entry point for the telecom RAG chatbot.
 Usage: python main.py
 """
-
 import os
 import sys
 
-# 1. Force the compatible protobuf parser
+# 1. FORCE the pure-Python protobuf implementation immediately
 os.environ["PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION"] = "python"
 os.environ["TRANSFORMERS_VERBOSITY"] = "error"
 
-# 2. Force Python to look in the app's root directory for local files
+# 2. Ensure local modules can be found safely
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
-# Now your regular imports can safely follow
+# Now your existing code can safely start below this line
+from rag_chain import build_chain
+
+# ... rest of your app.py code
+
+
 import streamlit as st
 from dotenv import load_dotenv
 from rag_chain import build_chain
