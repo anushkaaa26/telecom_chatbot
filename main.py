@@ -4,16 +4,20 @@ Usage: python main.py
 """
 
 import os
-# FORCE Python to use the compatible protobuf parser before any other library loads
+import sys
+
+# 1. Force the compatible protobuf parser
 os.environ["PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION"] = "python"
 os.environ["TRANSFORMERS_VERBOSITY"] = "error"
+
+# 2. Force Python to look in the app's root directory for local files
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
 # Now your regular imports can safely follow
 import streamlit as st
 from dotenv import load_dotenv
 from rag_chain import build_chain
 
-# ... rest of your code
 
 
 load_dotenv()
