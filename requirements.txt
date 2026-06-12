@@ -21,3 +21,7 @@ pypdf
 python-dotenv
 
 groq
+
+opentelemetry-api==1.25.0
+opentelemetry-sdk==1.25.0
+opentelemetry-exporter-otlp-proto-grpc==1.25.0
